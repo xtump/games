@@ -1,0 +1,206 @@
+<?xml version="1.0"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="games">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="game" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="title"/>
+              <xs:element type="xs:string" name="studio"/>
+              <xs:element type="xs:string" name="web"/>
+              <xs:element name="user">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="email"/>
+                    <xs:element name="psw">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="stars" use="optional"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element type="xs:string" name="server"/>
+                    <xs:element name="settings">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="general">
+                            <xs:complexType>
+                              <xs:sequence>
+                                  <xs:element  name="spam"><xs:simpleType> <xs:restriction base="xs:string">  <xs:enumeration value="Show"/> <xs:enumeration value="Hide"/> </xs:restriction> </xs:simpleType> </xs:element>
+                                  <xs:element  name="add_friend"><xs:simpleType> <xs:restriction base="xs:string"> <xs:enumeration value="auto"/> <xs:enumeration value="ask"/> </xs:restriction> </xs:simpleType> </xs:element>
+                                <xs:element  name="battle_types"/>
+                                <xs:element name="battle_save">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string">
+                                        <xs:attribute type="xs:string" name="source" use="optional"/>
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element type="xs:string" name="advanced_scoope"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="graphics">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="resolution"/>
+                                <xs:element type="xs:string" name="mode"/>
+                                <xs:element name="gamma">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string">
+                                        <xs:attribute type="xs:byte" name="value" use="optional"/>
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="brightness">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string">
+                                        <xs:attribute type="xs:byte" name="value" use="optional"/>
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="colorblind_mode">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string">
+                                        <xs:attribute type="xs:string" name="enabled" use="optional"/>
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="vertical_sync">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string">
+                                        <xs:attribute type="xs:string" name="enabled" use="optional"/>
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="triple_buff">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string">
+                                        <xs:attribute type="xs:string" name="enabled" use="optional"/>
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element  name="texture_quality"><xs:simpleType> <xs:restriction base="xs:string"> <xs:enumeration value="Low"/> <xs:enumeration value="Medium"/> <xs:enumeration value="High"/> </xs:restriction> </xs:simpleType></xs:element>
+                                <xs:element  name="shadow_quality"><xs:simpleType> <xs:restriction base="xs:string"> <xs:enumeration value="Low"/> <xs:enumeration value="Medium"/> <xs:enumeration value="High"/> </xs:restriction> </xs:simpleType></xs:element>
+                                <xs:element  name="terrain_quality"><xs:simpleType> <xs:restriction base="xs:string"> <xs:enumeration value="Low"/> <xs:enumeration value="Medium"/> <xs:enumeration value="High"/> </xs:restriction> </xs:simpleType></xs:element>
+                                <xs:element  name="water_quality"><xs:simpleType> <xs:restriction base="xs:string"> <xs:enumeration value="Low"/> <xs:enumeration value="Medium"/> <xs:enumeration value="High"/> </xs:restriction> </xs:simpleType></xs:element>
+                                <xs:element  name="post_processing"><xs:simpleType> <xs:restriction base="xs:string"> <xs:enumeration value="Low"/> <xs:enumeration value="Medium"/> <xs:enumeration value="High"/> </xs:restriction> </xs:simpleType></xs:element>
+                                <xs:element  name="foliage_quality"><xs:simpleType> <xs:restriction base="xs:string"> <xs:enumeration value="Low"/> <xs:enumeration value="Medium"/> <xs:enumeration value="High"/> </xs:restriction> </xs:simpleType></xs:element>
+                                <xs:element  name="foliage_density"><xs:simpleType> <xs:restriction base="xs:string"> <xs:enumeration value="Low"/> <xs:enumeration value="Medium"/> <xs:enumeration value="High"/> </xs:restriction> </xs:simpleType></xs:element>
+                                <xs:element  name="draw_distance"><xs:simpleType> <xs:restriction base="xs:string"> <xs:enumeration value="Low"/> <xs:enumeration value="Medium"/> <xs:enumeration value="High"/> </xs:restriction> </xs:simpleType></xs:element>
+                                <xs:element  name="anti_aliasing"><xs:simpleType> <xs:restriction base="xs:string"> <xs:enumeration value="FXAA"/> <xs:enumeration value="MXAA"/> <xs:enumeration value="disabled"/> </xs:restriction> </xs:simpleType></xs:element>
+                                <xs:element  name="anisotropic_filtering"><xs:simpleType> <xs:restriction base="xs:string"> <xs:enumeration value="32x"/> <xs:enumeration value="8x"/> <xs:enumeration value="16x"/> </xs:restriction> </xs:simpleType></xs:element>
+                                <xs:element name="transparency">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string">
+                                        <xs:attribute type="xs:string" name="enabled" use="optional"/>
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="tessalation">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string">
+                                        <xs:attribute type="xs:string" name="enabled" use="optional"/>
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="tracks" minOccurs="0">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string">
+                                        <xs:attribute type="xs:string" name="enable"/>
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="sound">
+                            <xs:complexType>
+                              <xs:sequence>
+                                  <xs:element  name="general">
+                                      <xs:simpleType>
+                                          <xs:restriction base="xs:integer"><xs:minInclusive value="0"/><xs:maxInclusive value="100"/></xs:restriction>
+                                      </xs:simpleType>
+                                  </xs:element>
+                                <xs:element  name="vehicle" minOccurs="0"><xs:simpleType>
+                                          <xs:restriction base="xs:integer"><xs:minInclusive value="0"/><xs:maxInclusive value="100"/></xs:restriction>
+                                      </xs:simpleType>
+                                  </xs:element>
+                                <xs:element  name="ship" minOccurs="0"><xs:simpleType>
+                                          <xs:restriction base="xs:integer"><xs:minInclusive value="0"/><xs:maxInclusive value="100"/></xs:restriction>
+                                      </xs:simpleType>
+                                  </xs:element>
+                                <xs:element  name="music"><xs:simpleType>
+                                          <xs:restriction base="xs:integer"><xs:minInclusive value="0"/><xs:maxInclusive value="100"/></xs:restriction>
+                                      </xs:simpleType>
+                                  </xs:element>
+                                <xs:element type="xs:string" name="notification"/>
+                                <xs:element name="config">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string">
+                                        <xs:attribute type="xs:float" name="system" use="optional"/>
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                              <xs:attribute type="xs:string" name="enabled" use="optional"/>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="controls">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string">
+                                  <xs:attribute type="xs:string" name="default" use="optional"/>
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element type="xs:string" name="main_battery" minOccurs="0"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute type="xs:int" name="id" use="optional"/>
+                  <xs:attribute type="xs:string" name="psw_autosave" use="optional"/>
+                  <xs:attribute type="xs:short" name="port" use="optional"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute type="xs:string" name="version" use="optional"/>
+            <xs:attribute type="xs:string" name="console" use="optional"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute type="xs:string" name="client"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

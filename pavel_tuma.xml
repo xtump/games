@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+<games xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="xsd.xsd">
+    <game version="0.9.17.1 #388" console="false">
+        <title>World of Tanks</title>
+        <studio>Wargaming.net</studio>
+        <web>https://www.worldoftanks.eu</web>
+        <user id="222345" psw_autosave="true" port="2000">
+            <email>xpetsv@email.cz</email>
+            <psw stars="enabled"></psw>
+            <server>EU1</server>
+            <settings>
+                <general>
+                    <spam>Hide</spam>
+                    <add_friend>ask</add_friend>
+                    <battle_types>Standardní bitva, Střetnutí</battle_types>
+                    <battle_save source="/battle/videos">Pouze poslední</battle_save>
+                    <advanced_scoope>51x, 60x</advanced_scoope>                
+                 
+                </general>
+                <graphics>
+                    <resolution>1920x1080</resolution>
+			<mode>Fullscreen</mode>
+			<gamma value="33" />
+			<brightness value="33" />
+			<colorblind_mode enabled="false" />
+			<vertical_sync enabled="true" />
+                        <triple_buff enabled="true" />
+		<texture_quality>High</texture_quality>
+		<shadow_quality>High</shadow_quality>
+		<terrain_quality>Medium</terrain_quality>
+		<water_quality>High</water_quality>
+                <post_processing>High</post_processing>
+		<foliage_quality>High</foliage_quality>
+		<foliage_density>Low</foliage_density>
+		<draw_distance>High</draw_distance>
+		<anti_aliasing>FXAA</anti_aliasing>
+		<anisotropic_filtering>8x</anisotropic_filtering>
+                <transparency enabled="true" />
+		<tessalation enabled="true" />
+                <tracks enable="true" />
+                </graphics>
+                <sound enabled="true">
+                    <general>100</general>
+                    <vehicle>100</vehicle>
+                    <music>75</music>
+                    <notification>national</notification>
+                    <config system="5.1"/>
+                </sound>
+                <controls default="true"/>
+            </settings>
+        </user>
+      
+    </game>
+    <game version="0.6.4" console="false">
+        <title>World of Warships</title>
+        <studio>Wargaming.net</studio>
+        <web>https://www.worldoftanks.eu</web>
+        <user id="5524" psw_autosave="true" port="3001">
+            <email>warlord@email.cz</email>
+            <psw stars="enabled"></psw>
+            <server>EU2</server>
+            <settings>
+                <general>
+                    <spam>Show</spam>
+                    <add_friend>ask</add_friend>
+                    <battle_types>Standardní bitva</battle_types>
+                    <battle_save source="/battle/videos">Všechny bitvy</battle_save>
+                    <advanced_scoope>21x</advanced_scoope>                
+                 
+                </general>
+                <graphics>
+                    <resolution>3840 × 2160</resolution>
+			<mode>Fullscreen</mode>
+			<gamma value="22" />
+			<brightness value="50" />
+			<colorblind_mode enabled="false" />
+			<vertical_sync enabled="true" />
+                        <triple_buff enabled="true" />
+		<texture_quality>High</texture_quality>
+		<shadow_quality>High</shadow_quality>
+		<terrain_quality>High</terrain_quality>
+		<water_quality>High</water_quality>
+                <post_processing>High</post_processing>
+		<foliage_quality>High</foliage_quality>
+		<foliage_density>High</foliage_density>
+		<draw_distance>High</draw_distance>
+		<anti_aliasing>FXAA</anti_aliasing>
+		<anisotropic_filtering>32x</anisotropic_filtering>
+                <transparency enabled="true" />
+		<tessalation enabled="true" />
+                </graphics>
+                <sound enabled="true">
+                    <general>100</general>
+                    <ship>100</ship>
+                    <music>75</music>
+                    <notification>Systémový jazyk</notification>
+                    <config system="5.1"/>
+                </sound>
+                <controls default="false"/>
+                <main_battery>Mouse_4</main_battery>
+            </settings>
+        </user>
+    </game>
+</games>
