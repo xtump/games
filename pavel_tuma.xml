@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-
+<!-- Odkaz na github: https://github.com/xtump/games.git --> 
 
 <games xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="xsd.xsd">
     <game version="0.9.17.1 #388" console="false">
